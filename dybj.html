@@ -35,19 +35,34 @@
 </style>
   </head>
 <body>
-    <a href="http://douyini.net">
+    <a href="#" class="replacement-link">
         <img src="img/fm001.jpg" alt="">
     </a>
     <div class="container">
-        <a href="http://douyini.net">
+        <a href="#" class="replacement-link">
             <img src="img/qr002.jpg" alt="">
         </a>
         <p>
-            <a href="http://douyini.net">
+            <a href="#" class="replacement-link">
                 <b>地址：</b>douyini.net <br>
                 双击图片或者双击地址观看哦~~
             </a>
         </p>
     </div>
+    <script>
+         // 获取需要替换链接的图片元素
+    var imgslinks = document.querySelectorAll(".replacement-link");
+
+    // 定义需要替换的链接地址
+    var links = [
+        "http://douyini.net",
+        "http://douyini.net",
+        "http://douyini.net"
+    ];
+        // 将需要替换链接的图片元素的 href 属性修改为对应的链接
+    for (var i = 0; i < imgslinks.length; i++) {
+        imgslinks[i].href = links[i];
+    }
+</script>
 </body>
 </html>
