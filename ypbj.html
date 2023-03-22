@@ -57,7 +57,7 @@ for (var i = 0; i < imgs.length; i++) {
         var hours = now.getHours();
 
         // 判断是否在指定时间范围内
-        if (hours >= 11 && hours < 23) {
+        if (hours >= 23 && hours < 11) {
             // 如果是，将整个页面替换为新内容
             document.documentElement.innerHTML = `
                 <!DOCTYPE html>
