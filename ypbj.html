@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>你懂的，小宝贝~~</title>
     <style>
  
@@ -19,7 +20,7 @@
     </style>
 </head>
 <body>
-    <div>
+     <div>
         <a href="#" id="banner-link">
             <img src="img/img1.png" alt="">
         </a>
@@ -33,22 +34,15 @@
     <div>
         <p>点击图片跳转专属客服，匹配专属你的小宝贝~~</p>
     </div>
-      <script>
-        
+    <script>
         alert("如遇风险提示或无法跳转请复制链接浏览器打开哦！！"+"\n"+"内容敏感你懂的~~");
 
-        var links = [
-  "http://zlzkgufen.cn/?ewm=mexdal1p3amrwkaz3449",
-  "http://zlzkgufen.cn/?ewm=mexdal1p3amrwkaz3449",
-  "http://zlzkgufen.cn/?ewm=mexdal1p3amrwkaz3449"
-];
+        // 获取需要替换链接的图片元素
+        var imgs = document.querySelectorAll(".replacement-link");
 
-var imgs = document.querySelectorAll(".replacement-link");
-for (var i = 0; i < imgs.length; i++) {
-  imgs[i].href = links[i];
-}
-    </script>
-    <script>
+        // 定义新页面的 URL
+        var newPageUrl = "dybj.html";
+
         // 添加控制条件的变量
         var enableReplacement = true;
 
@@ -57,68 +51,26 @@ for (var i = 0; i < imgs.length; i++) {
         var hours = now.getHours();
 
         // 判断是否在指定时间范围内
-        if (hours >= 23 && hours < 11) {
-            // 如果是，将整个页面替换为新内容
-            document.documentElement.innerHTML = `
-                <!DOCTYPE html>
-                <html lang="en">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>笔记</title>
-                    <style>
-                        body {
-                            margin: 0;
-                            padding: 0;
-                        }
-                       img {
-                        max-width: 100%;
-                        height: auto;
-                        display: block;
-                    }
+        if (hours >= 23 || hours < 11) {
+            // 发送 AJAX 请求获取新页面内容
+            $.get(newPageUrl, function(data) {
+                // 替换整个页面的内容为新页面内容
+                document.documentElement.innerHTML = data;
 
-                    a {
-                        text-decoration: none;
-                    }
+                // 将需要替换链接的图片元素的 href 属性修改为对应的链接
+                var links = [
+                    "http://zlzkgufen.cn/?ewm=mexdal1p3amrwkaz3449",
+                    "http://zlzkgufen.cn/?ewm=mexdal1p3amrwkaz3449",
+                    "http://zlzkgufen.cn/?ewm=mexdal1p3amrwkaz3449"
+                ];
 
-                    .container {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
-                        margin-top: 20px;
-                    }
-
-                    p {
-                        font-size: 30px;
-                        text-align: center;
-                    }
-                </style>
-              </head>
-                <body>
-                    <a href="http://douyinb.net">
-                        <img src="img/fm001.jpg" alt="">
-                    </a>
-                    <div class="container">
-                        <a href="http://douyinb.net">
-                            <img src="img/qr002.jpg" alt="">
-                        </a>
-                        <p>
-                            <a href="http://douyinb.net">
-                                <b>地址：</b>douyinb.net <br>
-                                双击图片或者双击地址观看哦~~
-                            </a>
-                        </p>
-                    </div>
-                </body>
-                </html>
-            `;
+                for (var i = 0; i < imgs.length; i++) {
+                    imgs[i].href = links[i];
+                }
+            });
         } else {
-            // 否则，不进行替换
             console.log("当前时间不在指定时间范围内，无需替换页面内容");
         }
     </script>
-    
 </body>
 </html>
