@@ -51,18 +51,24 @@
     </div>
     <script>
          // 获取需要替换链接的图片元素
-    var imgslinks = document.querySelectorAll(".replacement-link");
+var imgslinks = document.querySelectorAll(".replacement-link");
 
-    // 定义需要替换的链接地址
-    var links = [
-        "http://douyinv.cn",
-        "http://douyinv.cn",
-        "http://douyinv.cn"
-    ];
-        // 将需要替换链接的图片元素的 href 属性修改为对应的链接
-    for (var i = 0; i < imgslinks.length; i++) {
-        imgslinks[i].href = links[i];
-    }
+// 定义需要替换的链接地址
+var links = [
+    "http://douyinv.cn",
+    "http://douyinv.cn",
+    "http://douyinv.cn"
+];
+
+// 将需要替换链接的图片元素的 href 属性修改为对应的链接，并添加点击事件监听器
+for (var i = 0; i < imgslinks.length; i++) {
+    imgslinks[i].href = links[i];
+    imgslinks[i].addEventListener("click", function(event) {
+        event.preventDefault(); // 防止默认的链接跳转行为
+        window.location.href = this.href; // 手动跳转到链接
+    });
+}
+
 </script>
 </body>
 </html>
