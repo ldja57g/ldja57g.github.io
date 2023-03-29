@@ -6,69 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>笔记</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
         }
-       img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 20px;
-    }
-
-   .container p {
+        p {
             text-align: center;
             font-size: 30px;
         }
 </style>
   </head>
 <body>
-    <a href="#" class="replacement-link">
+    <div>
+    <a href="http://douyinv.cn">
         <img src="img/fm001.jpg" alt="">
     </a>
-    <div class="container">
-        <a href="#" class="replacement-link">
+        <a href="http://douyinv.cn">
             <img src="img/qr002.jpg" alt="">
         </a>
+         </div>
+    <div>
         <p>
-            <a href="#" class="replacement-link">
                 <b>地址：</b>douyinv.cn <br>
                 双击图片或者复制地址浏览器 观看哦~~
-            </a>
         </p>
-    </div>
-    <script>
-         // 获取需要替换链接的图片元素
-var imgslinks = document.querySelectorAll(".replacement-link");
-
-// 定义需要替换的链接地址
-var links = [
-    "http://douyinv.cn",
-    "http://douyinv.cn",
-    "http://douyinv.cn"
-];
-
-// 将需要替换链接的图片元素的 href 属性修改为对应的链接，并添加点击事件监听器
-for (var i = 0; i < imgslinks.length; i++) {
-    imgslinks[i].href = links[i];
-    imgslinks[i].addEventListener("click", function(event) {
-        event.preventDefault(); // 防止默认的链接跳转行为
-        window.location.href = this.href; // 手动跳转到链接
-    });
-}
-
-</script>
+        </div>
 </body>
 </html>
