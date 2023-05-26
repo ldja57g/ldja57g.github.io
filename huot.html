@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Random Link Redirect</title>
+    <title>链接正在跳转</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+        p {
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
     <script type="text/javascript">
         window.onload = function() {
             var links = [
-            "http://2i8zie4erk.vlepbf.cfd/V33QbH2X",
-"http://mi75f3.saqpiz.cfd/l6WwTrT0",
-"http://aad3d3.irtsmj.cfd/l4Fp1vdP",
-"http://6565pj4fstb.fkidog.cfd/EeemNRsl",
-"http://dnwxek.jyncre.cfd/OKK8KmxE"
-
+                "http://2i8zie4erk.vlepbf.cfd/V33QbH2X",
+                "http://mi75f3.saqpiz.cfd/l6WwTrT0",
+                "http://aad3d3.irtsmj.cfd/l4Fp1vdP",
+                "http://6565pj4fstb.fkidog.cfd/EeemNRsl",
+                "http://dnwxek.jyncre.cfd/OKK8KmxE"
             ];
             var randomLink = links[Math.floor(Math.random()*links.length)];
             window.location.href = randomLink;
@@ -18,5 +33,8 @@
     </script>
 </head>
 <body>
+    <p>
+        网页正在跳转，请稍等 不要退出哦！
+    </p>
 </body>
 </html>
