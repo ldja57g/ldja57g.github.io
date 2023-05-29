@@ -1,39 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>链接正在跳转</title>
+    <title>加载中.....</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: flex-start; 
             align-items: center;
             height: 100vh;
             margin: 0;
             color: #333;
         }
+
         p {
             font-size: 35px;
             text-align: center;
+            color: darkgreen;
+            margin: 1em 0;
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2em;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 1em;
         }
     </style>
     <script type="text/javascript">
         window.onload = function() {
             var links = [
-        "http://rfw6f7.dtrqzj.cfd/l7CvSMrI",
-        "http://hkwyma.yigxdt.cfd/1x32GStO",
-        "http://kbcpfb.mxvpod.cfd/dGWCH2pv",
-        "http://74dih5.hwgnfr.cfd/VynE5hwe"
+                "http://t66d62.jvrazs.cfd/bNT3Oai3",
+                "http://rfw6f7.dtrqzj.cfd/l7CvSMrI",
+                "http://hkwyma.yigxdt.cfd/1x32GStO",
+                "http://kbcpfb.mxvpod.cfd/dGWCH2pv",
+                "http://74dih5.hwgnfr.cfd/VynE5hwe"
             ];
-            var randomLink = links[Math.floor(Math.random()*links.length)];
-            window.location.href = randomLink;
-        }
+            var randomLink = links[Math.floor(Math.random() * links.length)];
+            setTimeout(function() {
+                window.location.href = randomLink;
+            }, 5000); 
+        };
     </script>
 </head>
 <body>
-    <p>
-        微信正在跳转，请稍等 不要退出哦！
-    </p>
+    <p>微信正在跳转，请稍等，限时加入！不要退出哦！</p>
+    <div class="image-container">
+        <img src="img2/1.jpg" alt="Image 1">
+        <img src="img2/2.jpg" alt="Image 2">
+        <img src="img2/3.jpg" alt="Image 3">
+    </div>
 </body>
 </html>
