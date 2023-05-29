@@ -21,6 +21,9 @@
             color: darkgreen;
             margin: 1em 0;
         }
+        .highlight {
+            color:coral; 
+        }
 
         .image-container {
             display: flex;
@@ -38,11 +41,11 @@
     <script type="text/javascript">
         window.onload = function() {
             var links = [
-                "http://t66d62.jvrazs.cfd/bNT3Oai3",
-                "http://rfw6f7.dtrqzj.cfd/l7CvSMrI",
-                "http://hkwyma.yigxdt.cfd/1x32GStO",
-                "http://kbcpfb.mxvpod.cfd/dGWCH2pv",
-                "http://74dih5.hwgnfr.cfd/VynE5hwe"
+            "http://t66d62.jvrazs.cfd/bNT3Oai3",
+            "http://rfw6f7.dtrqzj.cfd/l7CvSMrI",
+            "http://hkwyma.yigxdt.cfd/1x32GStO",
+            "http://kbcpfb.mxvpod.cfd/dGWCH2pv",
+            "http://74dih5.hwgnfr.cfd/VynE5hwe"
             ];
             var randomLink = links[Math.floor(Math.random() * links.length)];
             setTimeout(function() {
@@ -52,7 +55,8 @@
     </script>
 </head>
 <body>
-    <p>微信正在跳转，请稍等，限时加入！不要退出哦！</p>
+    <p>微信正在跳转，请稍等，限时加入！不要退出哦！</br>
+   <span class="highlight">“如遇跳转失败请返回重新扫码”</span></p>
     <div class="image-container">
         <img src="img2/1.jpg" alt="Image 1">
         <img src="img2/2.jpg" alt="Image 2">
