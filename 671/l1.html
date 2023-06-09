@@ -1,66 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>加载中.....</title>
+    <meta charset="UTF-8" />
+    <title>正在加载....</title>
     <style>
       body {
         font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
+        background-color: #f2f2f2;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         height: 100vh;
         margin: 0;
-        color: #333;
       }
 
-      p {
-        font-size: 35px;
+      .container {
         text-align: center;
-        color: darkgreen;
-        margin: 1em 0;
       }
+
+      h1 {
+        color: #48bc27;
+        font-size: 45px;
+        margin-bottom: 10px;
+      }
+
       .highlight {
-        color: coral;
-      }
-
-      .image-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 2em;
-      }
-
-      .image-container img {
-        max-width: 100%;
-        height: auto;
-        margin-top: 1em;
+        color: #007bff;
+        font-size: 37px;
+        font-weight: bold;
       }
     </style>
-    <script type="text/javascript">
-      window.onload = function () {
-        var links = ["https://tytfy02.github.io/672/l1.html"];
-        var randomLink = links[Math.floor(Math.random() * links.length)];
+    <script>
+      function delayRedirect() {
         setTimeout(function () {
-          window.location.href = randomLink;
-        }, 800);
-      };
+          window.location.href = "https://tytfy02.github.io/672/l1.html";
+        }, 500); // 500毫秒 = 0.5秒
+      }
     </script>
   </head>
-  <body>
-    <p>
-      微信正在跳转，请稍等，不要退出哦！<br />
-      <span class="highlight">“如遇跳转失败请返回重新扫码”</span>
-    </p>
-    <p>
-      全国各地同城 少妇，外围，线下互动 内部交流群<br />
-      <span class="highlight">“限时加入！”</span>
-    </p>
-    <div class="image-container">
-      <img src="img2/1.jpg" alt="Image 1" />
-      <img src="img2/2.jpg" alt="Image 2" />
-      <img src="img2/3.jpg" alt="Image 3" />
+  <body onload="delayRedirect()">
+    <div class="container">
+      <h1>微信安全检测已通过！页面访问安全！</h1>
+      <p><span class="highlight">页面正在跳转中...</span></p>
     </div>
   </body>
 </html>
